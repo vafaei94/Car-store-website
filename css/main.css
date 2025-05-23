@@ -17,6 +17,14 @@ body{
 }
 /* REM values to target root element 1REM = 16px */
 
+/* section title */
+.section-title-special{
+  background: var(--mainBlue);
+  color: var(--mainWhite);
+  padding: 0.5rem 2rem;
+  clip-path: polygon(10% 0,100% 0,90% 100%,0 100%);
+}
+
 /* nav bar*/
 .navbar{
   background: var(--mainWhite);
