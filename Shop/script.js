@@ -43,4 +43,8 @@ function calTotal() {
   }
   estimate = "$ " + (shippingCostPer + totalItemPrice).toFixed(3) + " Thousand";
   document.getElementById("txt-estimate").value = estimate;
+
+  //Result
+  var result = document.getElementById("result");
+  result.innerHTML = "Thank you for your purchase";
 }
