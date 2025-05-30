@@ -41,6 +41,6 @@ function calTotal() {
     default:
       shippingCostPer = 0;
   }
-  estimate = shippingCostPer + totalItemPrice;
+  estimate = "$ " + (shippingCostPer + totalItemPrice).toFixed(3) + " Thousand";
   document.getElementById("txt-estimate").value = estimate;
 }
