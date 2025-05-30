@@ -94,7 +94,7 @@
             <input
               type="number"
               min="0"
-              id="txt-q-kit"
+              id="h-model"
               size="3"
               placeholder="0"
             />
@@ -111,7 +111,7 @@
             <input
               type="number"
               min="0"
-              id="txt-q-kit"
+              id="a-model"
               size="3"
               placeholder="0"
             />
@@ -128,7 +128,7 @@
             <input
               type="number"
               min="0"
-              id="txt-q-kit"
+              id="r-model"
               size="3"
               placeholder="0"
             />
@@ -163,25 +163,22 @@
           Pickup (free)
           <br />
           <input type="radio" name="r-method" id="carrier" value="carrier" />
-          Car carrier floor (+3% to 1 of 3 states)
+          Car carrier floor (+1,000 $ to 1 of 3 states)
           <br />
           <input type="radio" name="r-method" id="ship" value="ship" /> By ship
-          (+10% to anywhere)
+          (+10,000 $ to anywhere)
           <br />
         </div>
         <div class="col-10 mx-auto my-3 col-md-6 col-lg-4">
           <label for="groupspecial">Special : </label>
           <br />
-          <input
-            type="checkbox"
-            id="fullOption"
-            name="fullOption"
-            value="YES"
-          />
-          Full option
+          <input type="checkbox" id="gift" name="gift" value="YES" />
+          This is a gift? !!
           <br />
-          <input type="checkbox" id="bodyKit" name="bodyKit" value="YES" />
-          With wide body kit
+          <br />
+          <input type="checkbox" id="Flamo" name="Flambo" value="YES" />
+          Is this your first Lamborghini?
+          <br />
           <br />
           <input
             type="checkbox"
@@ -189,7 +186,7 @@
             name="customerClub"
             value="YES"
           />
-          Are you a member of the customer club?
+          Are you a member of the customer club? <br />
           <br />
         </div>
       </div>
@@ -212,6 +209,7 @@
               type="submit"
               value="Estimate Total"
               id="btn-estimate"
+              onclick="calTotal()"
             />
             <input type="text" id="txt-estimate" placeholder="$0.00" />
           </p>

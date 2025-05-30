@@ -10,3 +10,37 @@ state.addEventListener("change", function () {
     btn.disabled = false;
   }
 });
+
+function calTotal() {
+  var huracan = document.getElementById("h-model").value;
+  var aventador = document.getElementById("a-model").value;
+  var revuelto = document.getElementById("r-model").value;
+  var shippingState = state.value;
+  var shippingMethod = document.querySelector("[name=r-method]:checked").value;
+
+  var totalQTY = huracan + aventador + revuelto,
+    shippingCostPer,
+    shippingCost,
+    estimate,
+    totalItemPrice = 199 * huracan + 290 * aventador + 790 * revuelto;
+  if (shippingState === "CA") {
+    totalItemPrice *= 1.075;
+  }
+  if (shippingState === "NY") {
+    totalItemPrice *= 1.09;
+  } else {
+    totalItemPrice *= 1;
+  }
+  switch (shippingMethod) {
+    case "carrier":
+      shippingCostPer = 10;
+      break;
+    case "ship":
+      shippingCostPer = 100;
+      break;
+    default:
+      shippingCostPer = 0;
+  }
+  estimate = shippingCostPer + totalItemPrice;
+  document.getElementById("txt-estimate").value = estimate;
+}
